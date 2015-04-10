@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:background="@drawable/background">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="350dp"
+        android:layout_weight="1"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <Button
+            android:text="Back"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:id="@+id/backButton"
+            android:layout_marginRight="10dp"
+            style="@style/grey_button"
+            android:background="@drawable/greybutton" />
+        <Button
+            android:text="Roll the dice!"
+            android:textStyle="bold"
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:layout_gravity="bottom"
+            android:id="@+id/diceButton"
+            style="@style/grey_button"
+            android:gravity="center"
+            android:background="@drawable/greybutton" />
+    </LinearLayout>
+    <TextView
+        android:text="Categories!"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:gravity="left" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="370dp"
+        android:layout_weight="1">
+        <RadioGroup
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="100dp"
+            android:layout_height="200dp"
+            android:id="@+id/categoriesGroup"
+            android:layout_marginRight="80dp">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="1-6"
+                android:id="@+id/oneSix" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1-12"
+                android:id="@+id/oneTwelve" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1-18"
+                android:id="@+id/oneEighteen" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="1-24"
+                android:id="@+id/oneTwentyfour" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1-30"
+                android:id="@+id/oneThirty" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1-36"
+                android:id="@+id/oneThirtysix" />
+        </RadioGroup>
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="180dp"
+            android:layout_height="160dp"
+            android:id="@+id/numberResult"
+            android:gravity="center" />
+    </LinearLayout>
+    <TextView
+        android:text="Total Score!"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:id="@+id/totalScore"
+        android:layout_gravity="center"
+        android:gravity="center" />
+</LinearLayout>

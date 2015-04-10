@@ -1,0 +1,4 @@
+Animations.MainActivity;animations.MainActivity
+Animations.RouletteActivity;animations.RouletteActivity
+Animations.DiceActivity;animations.DiceActivity
+Animations.DiceCategoriesActivity;animations.DiceCategoriesActivity

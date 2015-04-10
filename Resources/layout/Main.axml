@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background">
+    <Button
+        android:text="Dice"
+        android:textStyle="bold"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:id="@+id/taketoDiceButton"
+        android:background="@drawable/greybutton"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        style="@style/grey_button" />
+    <Button
+        android:text="Roulette"
+        android:textStyle="bold"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:id="@+id/rouletteButton"
+        android:background="@drawable/greybutton"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        style="@style/grey_button" />
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background">
+    <TextView
+        android:text="CHOOSE A CATEGORY"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/textView1"
+        style="@style/grey_button" />
+    <Button
+        android:text="1-6"
+        android:textStyle="bold"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:id="@+id/oneSix"
+        android:background="@drawable/greybutton"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        style="@style/grey_button" />
+    <Button
+        android:text="1-12"
+        android:textStyle="bold"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:id="@+id/oneTwelve"
+        android:background="@drawable/greybutton"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        style="@style/grey_button" />
+    <Button
+        android:text="1-18"
+        android:textStyle="bold"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:id="@+id/oneEighteen"
+        android:background="@drawable/greybutton"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        style="@style/grey_button" />
+    <Button
+        android:text="1-24"
+        android:textStyle="bold"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:id="@+id/oneTwentyfour"
+        android:background="@drawable/greybutton"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        style="@style/grey_button" />
+    <Button
+        android:text="1-30"
+        android:textStyle="bold"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:id="@+id/oneThirty"
+        android:background="@drawable/greybutton"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        style="@style/grey_button" />
+    <Button
+        android:text="1-36"
+        android:textStyle="bold"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:id="@+id/oneThirtysix"
+        android:background="@drawable/greybutton"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        style="@style/grey_button" />
+    <Button
+        android:text="Back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/backButton"
+        android:background="@drawable/greybutton"
+        style="@style/grey_button" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:id="@+id/textView1"
+        style="@style/grey_button"
+        android:background="@drawable/greybutton" />
+    <Button
+        android:text="Back"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:id="@+id/backButton"
+        android:layout_marginRight="10dp"
+        style="@style/grey_button"
+        android:background="@drawable/greybutton" />
+    <Button
+        android:text="Back"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:id="@+id/backButton"
+        android:layout_marginRight="10dp"
+        style="@style/grey_button"
+        android:background="@drawable/greybutton" />
+</LinearLayout>
