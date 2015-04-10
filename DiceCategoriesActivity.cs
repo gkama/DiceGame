@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace Animations
 {
-	[Activity (Label = "Application", Icon = "@drawable/dragon")]			
+	[Activity (Label = "Matching Dice Game Categories!", Icon = "@drawable/dicemastericon")]			
 	public class DiceCategoriesActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)

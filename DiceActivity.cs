@@ -9,7 +9,7 @@ using Android.OS;
 
 namespace Animations
 {
-	[Activity (Label = "Application", Icon = "@drawable/dragon")]
+	[Activity (Label = "Matching Dice Game!", Icon = "@drawable/dicemastericon")]
 	public class DiceActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
@@ -17,7 +17,9 @@ namespace Animations
 			base.OnCreate (bundle);
 
 			int total = 0;
-			int numberOfC = 0;
+			float numberOfC = 0;
+			float numberOfM = 0;
+			float accuracy = 0;
 
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.DiceScreen);
@@ -31,6 +33,7 @@ namespace Animations
 			var categoryText = FindViewById<TextView> (Resource.Id.categoryText);
 			var totalScore = FindViewById<TextView> (Resource.Id.totalScore);
 			var numberOfClicks = FindViewById<TextView> (Resource.Id.numberOfClicks);
+			var numberOfMatches = FindViewById<TextView> (Resource.Id.numberOfMatches);
 
 			Button diceButton = FindViewById<Button> (Resource.Id.diceButton);
 			Button backButton = FindViewById<Button> (Resource.Id.backButton);
@@ -49,9 +52,14 @@ namespace Animations
 				int resultM = RandomMatchNumber (1, 36);
 				matchNumber.Text = resultM.ToString();
 
-				// See if it matches
+				// See if it matches & display number of matches & accuracy
 				if (resultR == resultM) {
 					Toast.MakeText (this, "Awesome Stuff! It's a MATCH!", ToastLength.Long).Show();
+
+					// Number of matches & accuracy calculation
+					numberOfM += 1;
+					//if(numberOfC != 0){ accuracy = (numberOfM/numberOfC)*100;}
+					//numberOfMatches.Text = "Number of Matches: " + numberOfM.ToString() + "  -  " + accuracy.ToString(".0##") + "%";
 				}
 
 				// Add total & display it
@@ -61,6 +69,11 @@ namespace Animations
 				// Number of clicks counter
 				numberOfC += 1;
 				numberOfClicks.Text = "Number of Clicks: " + numberOfC.ToString();
+				if(numberOfC != 0){ accuracy = (numberOfM/numberOfC)*100;}
+				if(numberOfM == 0){ numberOfMatches.Text = "Number of Matches: 0" + "  -  " + "0%";}
+				else{
+					numberOfMatches.Text = "Number of Matches: " + numberOfM.ToString() + "  -  " + accuracy.ToString(".0##") + "%";
+				}
 			};
 
 			// Back Button

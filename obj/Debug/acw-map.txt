@@ -1,4 +1,6 @@
 Animations.MainActivity;animations.MainActivity
-Animations.RouletteActivity;animations.RouletteActivity
 Animations.DiceActivity;animations.DiceActivity
 Animations.DiceCategoriesActivity;animations.DiceCategoriesActivity
+Animations.RegularDiceActivity;animations.RegularDiceActivity
+Animations.HighLowDiceActivity;animations.HighLowDiceActivity
+Animations.ChuckALuckActivity;animations.ChuckALuckActivity

@@ -4,6 +4,13 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/background">
+    <Button
+        android:text="Back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/backButton"
+        android:background="@drawable/greybutton"
+        style="@style/grey_button" />
     <TextView
         android:text="CHOOSE A CATEGORY"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -71,17 +78,10 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         style="@style/grey_button" />
-    <Button
-        android:text="Back"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/backButton"
-        android:background="@drawable/greybutton"
-        style="@style/grey_button" />
     <TextView
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
-        android:layout_height="52dp"
+        android:layout_height="45dp"
         android:id="@+id/textView1"
         style="@style/grey_button"
         android:background="@drawable/greybutton" />

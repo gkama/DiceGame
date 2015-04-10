@@ -47,9 +47,11 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RouletteActivity.cs" />
     <Compile Include="DiceActivity.cs" />
     <Compile Include="DiceCategoriesActivity.cs" />
+    <Compile Include="RegularDiceActivity.cs" />
+    <Compile Include="HighLowDiceActivity.cs" />
+    <Compile Include="ChuckALuckActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -73,9 +75,14 @@
     <AndroidResource Include="Resources\values\Styles.xml" />
     <AndroidResource Include="Resources\drawable-xxhdpi\GreyButton.xml" />
     <AndroidResource Include="Resources\drawable-xxhdpi\darkdice.jpg" />
-    <AndroidResource Include="Resources\layout\RouletteScreen.axml" />
     <AndroidResource Include="Resources\layout\DiceScreen.axml" />
     <AndroidResource Include="Resources\layout\DiceCategoriesScreen.axml" />
+    <AndroidResource Include="Resources\layout\RegularDiceScreen.axml" />
+    <AndroidResource Include="Resources\layout\HighLowDiceScreen.axml" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\favicon.ico" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\blankwhitedice.ico" />
+    <AndroidResource Include="Resources\layout\ChuckALuckScreen.axml" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dicemastericon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

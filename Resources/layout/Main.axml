@@ -4,8 +4,28 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/background">
+    <TextView
+        android:text="DICE MASTER"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="8dp" />
     <Button
-        android:text="Dice"
+        android:text="Regular Die!"
+        android:textStyle="bold"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:id="@+id/taketoRegularDiceGameButton"
+        android:background="@drawable/greybutton"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        style="@style/grey_button" />
+    <Button
+        android:text="Matching Dice Game!"
         android:textStyle="bold"
         android:layout_width="250dp"
         android:layout_height="60dp"
@@ -15,11 +35,21 @@
         android:layout_marginTop="10dp"
         style="@style/grey_button" />
     <Button
-        android:text="Roulette"
+        android:text="High-Low Die Game!"
         android:textStyle="bold"
         android:layout_width="250dp"
         android:layout_height="60dp"
-        android:id="@+id/rouletteButton"
+        android:id="@+id/taketoHighLowDieGameButton"
+        android:background="@drawable/greybutton"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        style="@style/grey_button" />
+    <Button
+        android:text="Chuck-A-Luck Die Game!"
+        android:textStyle="bold"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:id="@+id/taketoChuckALuckGameButton"
         android:background="@drawable/greybutton"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"

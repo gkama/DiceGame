@@ -22,6 +22,11 @@ C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\drawabl
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\values\styles.xml
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\drawable-xxhdpi\greybutton.xml
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\drawable-xxhdpi\darkdice.jpg
-C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\layout\roulettescreen.xml
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\layout\dicescreen.xml
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\layout\dicecategoriesscreen.xml
+C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\layout\regulardicescreen.xml
+C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\layout\highlowdicescreen.xml
+C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\drawable-xxhdpi\favicon.ico
+C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\drawable-xxhdpi\blankwhitedice.ico
+C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\layout\chuckaluckscreen.xml
+C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\drawable-xxhdpi\dicemastericon.png
