@@ -99,6 +99,9 @@ namespace Animations
 			// aapt resource value: 0x7f020009
 			public const int StatsButton = 2130837513;
 			
+			// aapt resource value: 0x7f02000a
+			public const int tabIcon = 2130837514;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -132,6 +135,9 @@ namespace Animations
 			
 			// aapt resource value: 0x7f070024
 			public const int bettingRadioButtons = 2131165220;
+			
+			// aapt resource value: 0x7f070036
+			public const int caldg = 2131165238;
 			
 			// aapt resource value: 0x7f07000c
 			public const int categoryText = 2131165196;
@@ -169,6 +175,12 @@ namespace Animations
 			// aapt resource value: 0x7f070022
 			public const int highlowdieText = 2131165218;
 			
+			// aapt resource value: 0x7f070035
+			public const int hldg = 2131165237;
+			
+			// aapt resource value: 0x7f070033
+			public const int linearLayout1 = 2131165235;
+			
 			// aapt resource value: 0x7f070027
 			public const int lowRadioButton = 2131165223;
 			
@@ -180,6 +192,9 @@ namespace Animations
 			
 			// aapt resource value: 0x7f070002
 			public const int matchingdicegameText = 2131165186;
+			
+			// aapt resource value: 0x7f070034
+			public const int mdg = 2131165236;
 			
 			// aapt resource value: 0x7f070007
 			public const int moneyImage = 2131165191;
@@ -231,18 +246,6 @@ namespace Animations
 			
 			// aapt resource value: 0x7f07002a
 			public const int space2 = 2131165226;
-			
-			// aapt resource value: 0x7f070036
-			public const int startButton = 2131165238;
-			
-			// aapt resource value: 0x7f070035
-			public const int startingAmount = 2131165237;
-			
-			// aapt resource value: 0x7f070034
-			public const int startingAmountText = 2131165236;
-			
-			// aapt resource value: 0x7f070033
-			public const int startingLayout = 2131165235;
 			
 			// aapt resource value: 0x7f07002c
 			public const int statsButton = 2131165228;

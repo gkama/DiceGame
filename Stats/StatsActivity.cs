@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ *  Author: Georgi Kamacharov
+ *  Date: 4/15/2015
+ *  Description: View about screen/activity
+ * 
+*/
+
+using System;
 
 using Android.App;
 using Android.Content;
@@ -11,7 +18,7 @@ using Android.Animation;
 namespace Animations
 {
 	[Activity (Label = "Dice Master", Icon = "@drawable/dicemastericon")]
-	public class StatsActivity : Activity, GestureDetector.IOnGestureListener
+	public class StatsActivity : TabActivity, GestureDetector.IOnGestureListener
 	{
 		private GestureDetector gestureDetector;
 
@@ -24,12 +31,27 @@ namespace Animations
 
 			SetContentView (Resource.Layout.StatsScreen);
 
-			var startingAmount = FindViewById<EditText> (Resource.Id.startingAmount);
-
-			string startingMoneyAmount = startingAmount.Text.ToString ();
+			CreateTab (typeof(MDGActivity), "mdg", "MDG", Resource.Drawable.tabIcon);
+			CreateTab (typeof(HLDGActivity), "hldg", "HLDG", Resource.Drawable.tabIcon);
+			CreateTab (typeof(CALDGActivity), "caldg", "CALDG", Resource.Drawable.tabIcon);
 
 			// Gesture Detection
 			gestureDetector = new GestureDetector(this);
+		}
+
+
+		// Create tab for tabhost
+		private void CreateTab(Type activityType, string tag, string label, int drawableId )
+		{
+			var intent = new Intent(this, activityType);
+			intent.AddFlags(ActivityFlags.NewTask);
+
+			var spec = TabHost.NewTabSpec(tag);
+			var drawableIcon = Resources.GetDrawable(drawableId);
+			spec.SetIndicator(label, drawableIcon);
+			spec.SetContent(intent);
+
+			TabHost.AddTab(spec);
 		}
 
 		// Gestures

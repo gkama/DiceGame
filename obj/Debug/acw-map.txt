@@ -6,3 +6,6 @@ Animations.HighLowDiceActivity;animations.HighLowDiceActivity
 Animations.ChuckALuckActivity;animations.ChuckALuckActivity
 Animations.AboutActivity;animations.AboutActivity
 Animations.StatsActivity;animations.StatsActivity
+Animations.MDGActivity;animations.MDGActivity
+Animations.HLDGActivity;animations.HLDGActivity
+Animations.CALDGActivity;animations.CALDGActivity

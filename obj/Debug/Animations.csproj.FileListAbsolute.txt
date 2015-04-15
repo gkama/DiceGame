@@ -35,3 +35,4 @@ C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\anim\an
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\layout\statsscreen.xml
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\drawable-xxhdpi\statsbutton.xml
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\drawable-xxhdpi\dollarsign.jpg
+C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\drawable-xxhdpi\tabicon.xml

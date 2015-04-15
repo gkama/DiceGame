@@ -1,8 +1,8 @@
 package animations;
 
 
-public class StatsActivity
-	extends android.app.TabActivity
+public class MDGActivity
+	extends android.app.Activity
 	implements
 		mono.android.IGCUserPeer,
 		android.view.GestureDetector.OnGestureListener
@@ -19,15 +19,15 @@ public class StatsActivity
 			"n_onShowPress:(Landroid/view/MotionEvent;)V:GetOnShowPress_Landroid_view_MotionEvent_Handler:Android.Views.GestureDetector/IOnGestureListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"n_onSingleTapUp:(Landroid/view/MotionEvent;)Z:GetOnSingleTapUp_Landroid_view_MotionEvent_Handler:Android.Views.GestureDetector/IOnGestureListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"";
-		mono.android.Runtime.register ("Animations.StatsActivity, Animations, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", StatsActivity.class, __md_methods);
+		mono.android.Runtime.register ("Animations.MDGActivity, Animations, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", MDGActivity.class, __md_methods);
 	}
 
 
-	public StatsActivity () throws java.lang.Throwable
+	public MDGActivity () throws java.lang.Throwable
 	{
 		super ();
-		if (getClass () == StatsActivity.class)
-			mono.android.TypeManager.Activate ("Animations.StatsActivity, Animations, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+		if (getClass () == MDGActivity.class)
+			mono.android.TypeManager.Activate ("Animations.MDGActivity, Animations, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

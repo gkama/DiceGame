@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ *  Author: Georgi Kamacharov
+ *  Date: 4/15/2015
+ *  Description: View about screen/activity
+ * 
+*/
+
+using System;
 
 using Android.App;
 using Android.Content;
@@ -46,12 +53,12 @@ namespace Animations
 				"Low if the sum is 2, 3, 4, 5, or 6.\n" +
 				"Seven if the sum is 7.\n" +
 				"A player can bet on any of the three outcomes. The payoff for a bet of High or for a bet of Low is 1:1. The payoff for a bet of seven is 4:1.\n" +
-				"Recommended for Multi player!\n";
+				"Recommended for Single/Multi player!\n";
 
 			chuckaluckdicegameText.Text = "Chuck-A-Luck Dice Game: In the game of Chuck-A-Luck the player selects an integer from 1 to 6, and then 3 dice are rolled. " +
-				"If exactly k dice show the player's number, the payoff is k:1. A mathematical assumption is that the dice are fair. Additionally, the game shows the number " +
-				"of matches in the bottom of the screen.\n" +
-				"Recommended for Multi player!\n";
+				"If exactly k dice show the player's number, the payoff is k:1. A player can select the outcome via the provided radio buttons. A mathematical assumption " +
+				"is that the dice are fair. Additionally, the game shows the number of matches in the bottom of the screen.\n" +
+				"Recommended for Single/Multi player!\n";
 
 			authorText.TextSize = 15;
 			authorText.Text = "\nAuthor: Georgi Kamacharov\n";

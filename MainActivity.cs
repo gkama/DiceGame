@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ *  Author: Georgi Kamacharov
+ *  Date: 4/15/2015
+ *  Description: View about screen/activity
+ * 
+*/
+
+using System;
 
 using Android.App;
 using Android.Content;

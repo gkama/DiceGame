@@ -53,7 +53,10 @@
     <Compile Include="HighLowDiceActivity.cs" />
     <Compile Include="ChuckALuckActivity.cs" />
     <Compile Include="AboutActivity.cs" />
-    <Compile Include="StatsActivity.cs" />
+    <Compile Include="Stats\StatsActivity.cs" />
+    <Compile Include="Stats\MDGActivity.cs" />
+    <Compile Include="Stats\HLDGActivity.cs" />
+    <Compile Include="Stats\CALDGActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -87,12 +90,14 @@
     <AndroidResource Include="Resources\layout\AboutScreen.axml" />
     <AndroidResource Include="Resources\anim\Anim3.xml" />
     <AndroidResource Include="Resources\anim\Anim4.xml" />
-    <AndroidResource Include="Resources\layout\StatsScreen.axml" />
     <AndroidResource Include="Resources\drawable-xxhdpi\StatsButton.xml" />
     <AndroidResource Include="Resources\drawable-xxhdpi\dollarsign.jpg" />
+    <AndroidResource Include="Resources\layout\StatsScreen.axml" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tabIcon.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Resources\anim\" />
+    <Folder Include="Stats\" />
   </ItemGroup>
 </Project>
