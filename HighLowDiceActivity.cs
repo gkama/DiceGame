@@ -25,10 +25,6 @@ namespace Animations
 		private static readonly Random randomNum = new Random();
 		private static readonly object syncLock = new object();
 
-		private static bool highBool = false;
-		private static bool sevenBool = false;
-		private static bool lowBool = false;
-
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -86,6 +82,48 @@ namespace Animations
 						else if(totalR < 7){ highlowText.Text = "It's LOW!";}
 						else { highlowText.Text = "It's SEVEN!";}
 
+						if(currentAmountInt <= 0){
+							currentAmount.Text = "0";
+							currentAmountText.Text = "Amount is less than or equal to 0!";
+						} 
+						else if(currentAmountInt > 0){
+							currentAmountText.Text = currentAmountInt.ToString();
+
+							// High selected
+							if(highRadioButton.Checked == true && totalR > 7) {
+								currentAmountInt += betAmountInt;
+									
+								currentAmount.Text = currentAmountInt.ToString();
+								currentAmountText.Text = currentAmountInt.ToString();
+							}
+							//////
+
+							// Seven selected
+							else if(sevenRadioButton.Checked == true && totalR == 7) {
+								currentAmountInt += (4*betAmountInt);
+
+								currentAmount.Text = currentAmountInt.ToString();
+								currentAmountText.Text = currentAmountInt.ToString();
+							}
+							//////
+
+							// Low selected
+							else if(lowRadioButton.Checked == true && totalR < 7) {
+								currentAmountInt += betAmountInt;
+
+								currentAmount.Text = currentAmountInt.ToString();
+								currentAmountText.Text = currentAmountInt.ToString();
+							}
+
+							else{
+								currentAmountInt -= betAmountInt;
+
+								currentAmount.Text = currentAmountInt.ToString();
+								currentAmountText.Text = currentAmountInt.ToString();
+							}
+						}
+						//////
+
 						sumRoll.Text = totalR.ToString();
 					}
 				}
@@ -99,9 +137,9 @@ namespace Animations
 		private void RadioButtonClick (object sender, EventArgs e)
 		{
 			RadioButton rb = (RadioButton) sender;
-			if(rb.Checked && rb.Text == "High"){ highBool = true; }
+			/*if(rb.Checked && rb.Text == "High"){ highBool = true; }
 			else if(rb.Checked && rb.Text == "Seven"){ sevenBool = true; }
-			else if(rb.Checked && rb.Text == "Low"){ lowBool = true; }
+			else if(rb.Checked && rb.Text == "Low"){ lowBool = true; }*/
 		}
 
 		// Randomizer
