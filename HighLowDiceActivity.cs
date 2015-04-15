@@ -137,9 +137,6 @@ namespace Animations
 		private void RadioButtonClick (object sender, EventArgs e)
 		{
 			RadioButton rb = (RadioButton) sender;
-			/*if(rb.Checked && rb.Text == "High"){ highBool = true; }
-			else if(rb.Checked && rb.Text == "Seven"){ sevenBool = true; }
-			else if(rb.Checked && rb.Text == "Low"){ lowBool = true; }*/
 		}
 
 		// Randomizer
