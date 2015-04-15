@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <TextView
+        android:text="Please enter desired starting amount below"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:gravity="fill_horizontal"
+        android:layout_marginTop="15dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/startingLayout">
+        <TextView
+            android:text="Starting Amount: $"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/startingAmountText"
+            android:layout_gravity="center" />
+        <EditText
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/startingAmount"
+            android:layout_gravity="center" />
+    </LinearLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/space1" />
+    <Button
+        android:text="Start"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:id="@+id/startButton"
+        style="@style/grey_button"
+        android:background="@drawable/greybutton"
+        android:layout_gravity="center" />
+</LinearLayout>

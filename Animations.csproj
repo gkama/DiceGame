@@ -52,6 +52,8 @@
     <Compile Include="RegularDiceActivity.cs" />
     <Compile Include="HighLowDiceActivity.cs" />
     <Compile Include="ChuckALuckActivity.cs" />
+    <Compile Include="AboutActivity.cs" />
+    <Compile Include="StatsActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -64,7 +66,6 @@
     <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\anim\Anim1.xml" />
     <AndroidResource Include="Resources\anim\Anim2.xml" />
@@ -83,6 +84,12 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\blankwhitedice.ico" />
     <AndroidResource Include="Resources\layout\ChuckALuckScreen.axml" />
     <AndroidResource Include="Resources\drawable-xxhdpi\dicemastericon.png" />
+    <AndroidResource Include="Resources\layout\AboutScreen.axml" />
+    <AndroidResource Include="Resources\anim\Anim3.xml" />
+    <AndroidResource Include="Resources\anim\Anim4.xml" />
+    <AndroidResource Include="Resources\layout\StatsScreen.axml" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\StatsButton.xml" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dollarsign.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

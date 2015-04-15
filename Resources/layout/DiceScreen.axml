@@ -14,14 +14,16 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_gravity="center">
-        <Button
-            android:text="Back"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:id="@+id/backButton"
-            android:layout_marginRight="10dp"
-            style="@style/grey_button"
-            android:background="@drawable/greybutton" />
+        <TextView
+            android:text="Matching Dice Game"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleText"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center" />
         <TextView
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"

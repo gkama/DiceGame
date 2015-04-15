@@ -37,6 +37,12 @@ namespace Animations
 			// aapt resource value: 0x7f040001
 			public const int Anim2 = 2130968577;
 			
+			// aapt resource value: 0x7f040002
+			public const int Anim3 = 2130968578;
+			
+			// aapt resource value: 0x7f040003
+			public const int Anim4 = 2130968579;
+			
 			static Animation()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -76,16 +82,22 @@ namespace Animations
 			public const int dicemastericon = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int dragon = 2130837508;
+			public const int dollarsign = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int favicon = 2130837509;
+			public const int dragon = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int GreyButton = 2130837510;
+			public const int favicon = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int Icon = 2130837511;
+			public const int GreyButton = 2130837511;
+			
+			// aapt resource value: 0x7f020008
+			public const int Icon = 2130837512;
+			
+			// aapt resource value: 0x7f020009
+			public const int StatsButton = 2130837513;
 			
 			static Drawable()
 			{
@@ -100,89 +112,170 @@ namespace Animations
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f070032
+			public const int aboutButton = 2131165234;
+			
 			// aapt resource value: 0x7f070000
-			public const int backButton = 2131165184;
-			
-			// aapt resource value: 0x7f070002
-			public const int categoryText = 2131165186;
-			
-			// aapt resource value: 0x7f070004
-			public const int diceButton = 2131165188;
-			
-			// aapt resource value: 0x7f070016
-			public const int highlowText = 2131165206;
-			
-			// aapt resource value: 0x7f070011
-			public const int matchNumber = 2131165201;
-			
-			// aapt resource value: 0x7f070008
-			public const int matchText = 2131165192;
-			
-			// aapt resource value: 0x7f070013
-			public const int numberOfClicks = 2131165203;
-			
-			// aapt resource value: 0x7f070014
-			public const int numberOfMatches = 2131165204;
-			
-			// aapt resource value: 0x7f070010
-			public const int numberResult = 2131165200;
-			
-			// aapt resource value: 0x7f070005
-			public const int numberResult1 = 2131165189;
+			public const int aboutTitle = 2131165184;
 			
 			// aapt resource value: 0x7f070006
-			public const int numberResult2 = 2131165190;
+			public const int amountLayout = 2131165190;
 			
-			// aapt resource value: 0x7f070007
-			public const int numberResult3 = 2131165191;
-			
-			// aapt resource value: 0x7f07000c
-			public const int oneEighteen = 2131165196;
-			
-			// aapt resource value: 0x7f07000a
-			public const int oneSix = 2131165194;
-			
-			// aapt resource value: 0x7f07000e
-			public const int oneThirty = 2131165198;
-			
-			// aapt resource value: 0x7f07000f
-			public const int oneThirtysix = 2131165199;
+			// aapt resource value: 0x7f070005
+			public const int authorText = 2131165189;
 			
 			// aapt resource value: 0x7f07000b
-			public const int oneTwelve = 2131165195;
+			public const int betAmount = 2131165195;
 			
-			// aapt resource value: 0x7f07000d
-			public const int oneTwentyfour = 2131165197;
+			// aapt resource value: 0x7f07000a
+			public const int bettingLayout = 2131165194;
+			
+			// aapt resource value: 0x7f070024
+			public const int bettingRadioButtons = 2131165220;
+			
+			// aapt resource value: 0x7f07000c
+			public const int categoryText = 2131165196;
+			
+			// aapt resource value: 0x7f070023
+			public const int checkboxLayout = 2131165219;
+			
+			// aapt resource value: 0x7f070004
+			public const int chuckaluckdicegameText = 2131165188;
+			
+			// aapt resource value: 0x7f070009
+			public const int currentAmount = 2131165193;
+			
+			// aapt resource value: 0x7f070010
+			public const int currentAmountText = 2131165200;
+			
+			// aapt resource value: 0x7f07000f
+			public const int diceButton = 2131165199;
+			
+			// aapt resource value: 0x7f070008
+			public const int enteramountText = 2131165192;
+			
+			// aapt resource value: 0x7f07000e
+			public const int errorText = 2131165198;
+			
+			// aapt resource value: 0x7f070025
+			public const int highRadioButton = 2131165221;
+			
+			// aapt resource value: 0x7f070029
+			public const int highlowText = 2131165225;
+			
+			// aapt resource value: 0x7f070003
+			public const int highlowdicegameText = 2131165187;
+			
+			// aapt resource value: 0x7f070022
+			public const int highlowdieText = 2131165218;
+			
+			// aapt resource value: 0x7f070027
+			public const int lowRadioButton = 2131165223;
+			
+			// aapt resource value: 0x7f07001e
+			public const int matchNumber = 2131165214;
+			
+			// aapt resource value: 0x7f070014
+			public const int matchText = 2131165204;
+			
+			// aapt resource value: 0x7f070002
+			public const int matchingdicegameText = 2131165186;
+			
+			// aapt resource value: 0x7f070007
+			public const int moneyImage = 2131165191;
+			
+			// aapt resource value: 0x7f070020
+			public const int numberOfClicks = 2131165216;
+			
+			// aapt resource value: 0x7f070021
+			public const int numberOfMatches = 2131165217;
+			
+			// aapt resource value: 0x7f07001d
+			public const int numberResult = 2131165213;
+			
+			// aapt resource value: 0x7f070011
+			public const int numberResult1 = 2131165201;
+			
+			// aapt resource value: 0x7f070012
+			public const int numberResult2 = 2131165202;
+			
+			// aapt resource value: 0x7f070013
+			public const int numberResult3 = 2131165203;
+			
+			// aapt resource value: 0x7f070018
+			public const int oneEighteen = 2131165208;
+			
+			// aapt resource value: 0x7f070016
+			public const int oneSix = 2131165206;
+			
+			// aapt resource value: 0x7f07001a
+			public const int oneThirty = 2131165210;
+			
+			// aapt resource value: 0x7f07001b
+			public const int oneThirtysix = 2131165211;
+			
+			// aapt resource value: 0x7f070017
+			public const int oneTwelve = 2131165207;
+			
+			// aapt resource value: 0x7f070019
+			public const int oneTwentyfour = 2131165209;
 			
 			// aapt resource value: 0x7f070001
 			public const int regulardieText = 2131165185;
 			
+			// aapt resource value: 0x7f070026
+			public const int sevenRadioButton = 2131165222;
+			
+			// aapt resource value: 0x7f070031
+			public const int space1 = 2131165233;
+			
+			// aapt resource value: 0x7f07002a
+			public const int space2 = 2131165226;
+			
+			// aapt resource value: 0x7f070036
+			public const int startButton = 2131165238;
+			
+			// aapt resource value: 0x7f070035
+			public const int startingAmount = 2131165237;
+			
+			// aapt resource value: 0x7f070034
+			public const int startingAmountText = 2131165236;
+			
+			// aapt resource value: 0x7f070033
+			public const int startingLayout = 2131165235;
+			
+			// aapt resource value: 0x7f07002c
+			public const int statsButton = 2131165228;
+			
+			// aapt resource value: 0x7f070028
+			public const int sumRoll = 2131165224;
+			
+			// aapt resource value: 0x7f070030
+			public const int taketoChuckALuckGameButton = 2131165232;
+			
+			// aapt resource value: 0x7f07002e
+			public const int taketoDiceButton = 2131165230;
+			
+			// aapt resource value: 0x7f07002f
+			public const int taketoHighLowDieGameButton = 2131165231;
+			
+			// aapt resource value: 0x7f07002d
+			public const int taketoRegularDiceGameButton = 2131165229;
+			
 			// aapt resource value: 0x7f070015
-			public const int sumRoll = 2131165205;
+			public const int textView1 = 2131165205;
 			
-			// aapt resource value: 0x7f07001b
-			public const int taketoChuckALuckGameButton = 2131165211;
+			// aapt resource value: 0x7f07002b
+			public const int title = 2131165227;
 			
-			// aapt resource value: 0x7f070019
-			public const int taketoDiceButton = 2131165209;
+			// aapt resource value: 0x7f07001c
+			public const int titleText = 2131165212;
 			
-			// aapt resource value: 0x7f07001a
-			public const int taketoHighLowDieGameButton = 2131165210;
+			// aapt resource value: 0x7f07001f
+			public const int totalScore = 2131165215;
 			
-			// aapt resource value: 0x7f070018
-			public const int taketoRegularDiceGameButton = 2131165208;
-			
-			// aapt resource value: 0x7f070009
-			public const int textView1 = 2131165193;
-			
-			// aapt resource value: 0x7f070017
-			public const int title = 2131165207;
-			
-			// aapt resource value: 0x7f070012
-			public const int totalScore = 2131165202;
-			
-			// aapt resource value: 0x7f070003
-			public const int userInput = 2131165187;
+			// aapt resource value: 0x7f07000d
+			public const int userInput = 2131165197;
 			
 			static Id()
 			{
@@ -198,22 +291,28 @@ namespace Animations
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int ChuckALuckScreen = 2130903040;
+			public const int AboutScreen = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int DiceCategoriesScreen = 2130903041;
+			public const int ChuckALuckScreen = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int DiceScreen = 2130903042;
+			public const int DiceCategoriesScreen = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int HighLowDiceScreen = 2130903043;
+			public const int DiceScreen = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int Main = 2130903044;
+			public const int HighLowDiceScreen = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int RegularDiceScreen = 2130903045;
+			public const int Main = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int RegularDiceScreen = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int StatsScreen = 2130903047;
 			
 			static Layout()
 			{

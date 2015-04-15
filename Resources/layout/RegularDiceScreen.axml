@@ -7,41 +7,48 @@
     android:minHeight="25px"
     android:background="@drawable/background">
     <LinearLayout
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="360dp"
+        android:layout_height="100dp"
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_weight="1"
         android:layout_gravity="center"
         android:gravity="center">
-        <Button
-            android:text="Back"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/backButton"
-            android:gravity="center"
-            android:layout_gravity="top"
-            android:background="@drawable/greybutton"
-            style="@style/grey_button" />
+        <Space
+            android:layout_height="match_parent"
+            android:id="@+id/space1"
+            android:layout_width="1dp" />
         <TextView
-            android:text="REGULAR DIE"
+            android:text="REGULAR DIE: "
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:id="@+id/regulardieText"
             android:gravity="center"
-            android:layout_marginTop="15dp" />
+            android:layout_gravity="center"
+            android:layout_marginLeft="25dp" />
         <TextView
             android:text="1-6"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:id="@+id/categoryText"
             android:gravity="center"
-            android:layout_marginBottom="10dp" />
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center">
         <Button
             android:text="Roll the die!"
             android:textStyle="bold"
@@ -59,7 +66,8 @@
         android:layout_height="370dp"
         android:layout_weight="1"
         android:layout_gravity="center"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginBottom="5dp">
         <TextView
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"

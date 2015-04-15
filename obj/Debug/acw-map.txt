@@ -4,3 +4,5 @@ Animations.DiceCategoriesActivity;animations.DiceCategoriesActivity
 Animations.RegularDiceActivity;animations.RegularDiceActivity
 Animations.HighLowDiceActivity;animations.HighLowDiceActivity
 Animations.ChuckALuckActivity;animations.ChuckALuckActivity
+Animations.AboutActivity;animations.AboutActivity
+Animations.StatsActivity;animations.StatsActivity

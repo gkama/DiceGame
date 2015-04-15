@@ -9,9 +9,17 @@ using Android.OS;
 
 namespace Animations
 {
-	[Activity (Label = "Matching Dice Game!", Icon = "@drawable/dicemastericon")]
-	public class DiceActivity : Activity
+	[Activity (Label = "Dice Master", Icon = "@drawable/dicemastericon")]
+	public class DiceActivity : Activity, GestureDetector.IOnGestureListener
 	{
+		private GestureDetector gestureDetector;
+
+		private static int SWIPE_THRESHOLD = 100;
+		private static int SWIPE_VELOCITY_THRESHOLD = 100;
+
+		private static readonly Random randomNum = new Random();
+		private static readonly object syncLock = new object();
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -31,17 +39,19 @@ namespace Animations
 			var numberResult = FindViewById<TextView> (Resource.Id.numberResult);
 			var matchNumber = FindViewById<TextView> (Resource.Id.matchNumber);
 			var categoryText = FindViewById<TextView> (Resource.Id.categoryText);
+			var titleText = FindViewById<TextView> (Resource.Id.titleText);
 			var totalScore = FindViewById<TextView> (Resource.Id.totalScore);
 			var numberOfClicks = FindViewById<TextView> (Resource.Id.numberOfClicks);
 			var numberOfMatches = FindViewById<TextView> (Resource.Id.numberOfMatches);
 
+
 			Button diceButton = FindViewById<Button> (Resource.Id.diceButton);
-			Button backButton = FindViewById<Button> (Resource.Id.backButton);
 
 			// Categories - Radio Buttons
 			numberResult.TextSize = 110;
 			matchNumber.TextSize = 130;
-			categoryText.TextSize = 30;
+			categoryText.TextSize = 25;
+			titleText.TextSize = 27;
 
 			categoryText.Text = "CATEGORY: 1-" + categoryMax;
 
@@ -49,7 +59,7 @@ namespace Animations
 			diceButton.Click += delegate {
 				int resultR = RandomNumber (1, categoryMax);
 				numberResult.Text = resultR.ToString ();
-				int resultM = RandomMatchNumber (1, 36);
+				int resultM = RandomNumber (1, 36);
 				matchNumber.Text = resultM.ToString();
 
 				// See if it matches & display number of matches & accuracy
@@ -58,8 +68,6 @@ namespace Animations
 
 					// Number of matches & accuracy calculation
 					numberOfM += 1;
-					//if(numberOfC != 0){ accuracy = (numberOfM/numberOfC)*100;}
-					//numberOfMatches.Text = "Number of Matches: " + numberOfM.ToString() + "  -  " + accuracy.ToString(".0##") + "%";
 				}
 
 				// Add total & display it
@@ -76,25 +84,67 @@ namespace Animations
 				}
 			};
 
-			// Back Button
-			backButton.Click += delegate {
-				Intent slideIntent = new Intent(this, typeof(DiceCategoriesActivity));
-				Bundle slideAnim = ActivityOptions.MakeCustomAnimation(Application.Context, Resource.Animation.Anim1, Resource.Animation.Anim2).ToBundle();
-				StartActivity(slideIntent, slideAnim);
-			};
+			// Gesture Detection
+			gestureDetector = new GestureDetector(this);
 		}
 			
 		// Randomizer
 		private int RandomNumber (int minRange, int maxRange){
-			Random randomNum = new Random();
-			return randomNum.Next(minRange, maxRange + 1);
+			lock(syncLock) {
+				return randomNum.Next(minRange, maxRange + 1);
+			}
 		}
 
-		// Random Match
-		private int RandomMatchNumber (int minRange, int maxRange){
-			Random r = new Random ();
-			return r.Next (minRange, maxRange + 1);
+		// Gestures
+		public override bool OnTouchEvent(MotionEvent e)
+		{
+			gestureDetector.OnTouchEvent(e);
+			return true;
 		}
+		public bool OnDown(MotionEvent e) {return true;}
+
+		// Used for Swiping
+		public bool OnFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY)
+		{
+			float diffY = e2.GetY() - e1.GetY();
+			float diffX = e2.GetX() - e1.GetX();
+
+			if (Math.Abs(diffX) > Math.Abs(diffY))
+			{
+				if (Math.Abs(diffX) > SWIPE_THRESHOLD && Math.Abs(velocityX) > SWIPE_VELOCITY_THRESHOLD)
+				{
+					if (diffX > 0)
+					{
+						// Left Swipe - go back
+						Intent slideIntent = new Intent(this, typeof(DiceCategoriesActivity));
+						Bundle slideAnim = ActivityOptions.MakeCustomAnimation(Application.Context, Resource.Animation.Anim3, Resource.Animation.Anim4).ToBundle();
+						StartActivity(slideIntent, slideAnim);
+						Finish ();
+					}
+					else
+					{
+						// Right Swipe
+					}
+				}
+			}
+			else if (Math.Abs(diffY) > SWIPE_THRESHOLD && Math.Abs(velocityY) > SWIPE_VELOCITY_THRESHOLD)
+			{
+				if (diffY > 0)
+				{
+					// Top swipe
+				}
+				else
+				{
+					// Bottom swipe
+				}
+			}
+			return true;
+		}
+		//
+		public void OnLongPress(MotionEvent e) {}
+		public bool OnScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {return false;}
+		public void OnShowPress(MotionEvent e) {}
+		public bool OnSingleTapUp(MotionEvent e) {return false;}
 	}
 }
 
