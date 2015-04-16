@@ -16,12 +16,40 @@ namespace Animations
 	[Activity (Label = "HLDGActivity")]			
 	public class HLDGActivity : Activity
 	{
+		public static String HLDG_DATA = "HLDGData";
+
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
-			TextView textview = new TextView (this);
-			textview.Text = "This is the HLDG tab";
-			SetContentView (textview);
+
+			TextView HLDGStatsView = new TextView (this);
+
+			SetContentView (HLDGStatsView);
+
+			ISharedPreferences HLDGPref = GetSharedPreferences (HLDG_DATA, FileCreationMode.Private);
+			ISharedPreferencesEditor HLDGEditor = HLDGPref.Edit ();
+
+			int totalAmount = HLDGPref.GetInt ("totalAmount", 0);
+			int totalBet = HLDGPref.GetInt ("totalBet", 0);
+			int totalHighMatches = HLDGPref.GetInt ("totalHighMatches", 0);
+			int totalSevenMatches = HLDGPref.GetInt ("totalSevenMatches", 0);
+			int totalLowMatches = HLDGPref.GetInt ("totalLowMatches", 0);
+			int totalAmountWon = HLDGPref.GetInt ("totalAmountWon", 0);
+			int totalAmountLost = HLDGPref.GetInt ("totalAmountLost", 0);
+			int totalSumRoll = HLDGPref.GetInt ("totalSumRoll", 0);
+
+
+			HLDGStatsView.Text = "LATEST GAME SCORES:\n " +
+			"Latest Amount: " + (totalAmount + totalBet) + "\n" +
+			"Latest Bet: " + totalBet + "\n" +
+			"Lates Sum Roll: " + totalSumRoll + "\n" +
+			"Total High Matches: " + totalHighMatches + "\n" +
+			"Total Seven Matches: " + totalSevenMatches + "\n" +
+			"Total Low Matches: " + totalLowMatches + "\n" +
+			"Total Amount Won: " + totalAmountWon + "\n" +
+			"Total Amount Lost: " + totalAmountLost + "\n";
+
+			HLDGEditor.Clear ().Apply ();
 		}
 	}
 }

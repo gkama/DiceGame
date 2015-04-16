@@ -33,37 +33,38 @@ namespace Animations
 
 			SetContentView (MDGStatsView);
 
-			ISharedPreferences pref = GetSharedPreferences (MDG_DATA, FileCreationMode.Private);
+			ISharedPreferences HLDGPref = GetSharedPreferences (MDG_DATA, FileCreationMode.Private);
+			ISharedPreferencesEditor HLDGEditor = HLDGPref.Edit ();
 
 			// Category 1-6
-			int totalScoreSix = pref.GetInt ("totalScoreSix", 0);
-			float numberOfClicksSix = pref.GetFloat ("numberOfClicksSix", 0);
-			float numberOfMathcesSix = pref.GetFloat ("numberOfMathcesSix", 0);
+			int totalScoreSix = HLDGPref.GetInt ("totalScoreSix", 0);
+			float numberOfClicksSix = HLDGPref.GetFloat ("numberOfClicksSix", 0);
+			float numberOfMathcesSix = HLDGPref.GetFloat ("numberOfMathcesSix", 0);
 
 			// Category 1-12
-			int totalScoreTwelve = pref.GetInt ("totalScoreTwelve", 0);
-			float numberOfClicksTwelve = pref.GetFloat ("numberOfClicksTwelve", 0);
-			float numberOfMathcesTwelve = pref.GetFloat ("numberOfMathcesTwelve", 0);
+			int totalScoreTwelve = HLDGPref.GetInt ("totalScoreTwelve", 0);
+			float numberOfClicksTwelve = HLDGPref.GetFloat ("numberOfClicksTwelve", 0);
+			float numberOfMathcesTwelve = HLDGPref.GetFloat ("numberOfMathcesTwelve", 0);
 
 			// Category 1-18
-			int totalScoreEighteen = pref.GetInt ("totalScoreEighteen", 0);
-			float numberOfClicksEighteen = pref.GetFloat ("numberOfClicksEighteen", 0);
-			float numberOfMathcesEighteen = pref.GetFloat ("numberOfMathcesEighteen", 0);
+			int totalScoreEighteen = HLDGPref.GetInt ("totalScoreEighteen", 0);
+			float numberOfClicksEighteen = HLDGPref.GetFloat ("numberOfClicksEighteen", 0);
+			float numberOfMathcesEighteen = HLDGPref.GetFloat ("numberOfMathcesEighteen", 0);
 
 			// Category 1-24
-			int totalScoreTwentyfour = pref.GetInt ("totalScoreTwentyfour", 0);
-			float numberOfClicksTwentyfour = pref.GetFloat ("numberOfClicksTwentyfour", 0);
-			float numberOfMathcesTwentyfour = pref.GetFloat ("numberOfMathcesTwentyfour", 0);
+			int totalScoreTwentyfour = HLDGPref.GetInt ("totalScoreTwentyfour", 0);
+			float numberOfClicksTwentyfour = HLDGPref.GetFloat ("numberOfClicksTwentyfour", 0);
+			float numberOfMathcesTwentyfour = HLDGPref.GetFloat ("numberOfMathcesTwentyfour", 0);
 
 			// Category 1-30
-			int totalScoreThirty = pref.GetInt ("totalScoreThirty", 0);
-			float numberOfClicksThirty = pref.GetFloat ("numberOfClicksThirty", 0);
-			float numberOfMathcesThirty = pref.GetFloat ("numberOfMathcesThirty", 0);
+			int totalScoreThirty = HLDGPref.GetInt ("totalScoreThirty", 0);
+			float numberOfClicksThirty = HLDGPref.GetFloat ("numberOfClicksThirty", 0);
+			float numberOfMathcesThirty = HLDGPref.GetFloat ("numberOfMathcesThirty", 0);
 
 			// Category 1-36
-			int totalScoreThirtysix = pref.GetInt ("totalScoreThirtysix", 0);
-			float numberOfClicksThirtysix = pref.GetFloat ("numberOfClicksThirtysix", 0);
-			float numberOfMathcesThirtysix = pref.GetFloat ("numberOfMathcesThirtysix", 0);
+			int totalScoreThirtysix = HLDGPref.GetInt ("totalScoreThirtysix", 0);
+			float numberOfClicksThirtysix = HLDGPref.GetFloat ("numberOfClicksThirtysix", 0);
+			float numberOfMathcesThirtysix = HLDGPref.GetFloat ("numberOfMathcesThirtysix", 0);
 
 
 
@@ -97,6 +98,8 @@ namespace Animations
 			"Total Score: " + totalScoreThirtysix + "\n" +
 			"Total Number of Clicks: " + numberOfClicksThirtysix + "\n" +
 			"Total Number of Matches: " + numberOfMathcesThirtysix + "\n";
+
+			HLDGEditor.Clear ().Apply ();
 
 			// Gesture Detection
 			gestureDetector = new GestureDetector(this);

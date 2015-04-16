@@ -28,6 +28,7 @@ namespace Animations
 
 		private static int SWIPE_THRESHOLD = 100;
 		private static int SWIPE_VELOCITY_THRESHOLD = 100;
+		public static String CALDG_DATA = "CALDGData";
 
 		private static readonly Random randomNum = new Random();
 		private static readonly object syncLock = new object();
@@ -64,6 +65,20 @@ namespace Animations
 			int currentAmountInt = 0;
 			int betAmountInt = 0;
 
+			int totalAmountLost = 0;
+			int totalAmountWon = 0;
+			int totalMatches = 0;
+
+			int[,] CALDGStats = new int[6,6];
+			String[,] CALDGStatsString = new string[6, 6];
+
+			for (int i = 0; i < 6; i++) {
+				CALDGStats [i, 0] = i + 1;
+			}
+
+			ISharedPreferences CALDGPrefs = GetSharedPreferences (CALDG_DATA, FileCreationMode.Private);
+			ISharedPreferencesEditor CALDGEditor = CALDGPrefs.Edit ();
+
 			// Roll the dice button
 			diceButton.Click += delegate {
 				// Check user input
@@ -78,6 +93,8 @@ namespace Animations
 
 							InputMethodManager closeKeyboard = (InputMethodManager)GetSystemService(Context.InputMethodService);
 							closeKeyboard.HideSoftInputFromWindow(userInput.WindowToken, 0);
+
+							int userInputInt = Int32.Parse(userInput.Text.ToString());
 
 							errorText.Text = "";
 
@@ -94,14 +111,17 @@ namespace Animations
 
 							if(resultR1.ToString() == userInput.Text.ToString()) {
 								match += 1;
+								totalMatches += 1;
 								matchText.Text = "MATCHES: " + match;
 							}
 							if(resultR2.ToString() == userInput.Text.ToString()){
 								match += 1;
+								totalMatches += 1;
 								matchText.Text = "MATCHES: " + match;
 							}
 							if(resultR3.ToString() == userInput.Text.ToString()){ 
 								match += 1;
+								totalMatches += 1;
 								matchText.Text = "MATCHES: " + match;
 							}
 							if(resultR1.ToString() != userInput.Text.ToString() && resultR2.ToString() != userInput.Text.ToString() &&
@@ -111,6 +131,7 @@ namespace Animations
 							}
 							if(match == 0){
 								currentAmountInt -= betAmountInt;
+								totalAmountLost += betAmountInt;
 								currentAmount.Text = currentAmountInt.ToString();
 								if(currentAmountInt <= 0){
 									currentAmount.Text = "0";
@@ -121,10 +142,35 @@ namespace Animations
 							}
 							else{
 								currentAmountInt += (match * betAmountInt);
+								totalAmountWon += (match * betAmountInt);
 								currentAmount.Text = currentAmountInt.ToString();
 								currentAmountText.Text = currentAmountInt.ToString();
 							}
 
+							// Populate stats
+							for(int i = 0; i < 6; i++){
+								if(CALDGStats[i, 0] == userInputInt){
+									// Latest Amount
+									CALDGStats[i, 1] = currentAmountInt;
+									// Latest Bet
+									CALDGStats[i, 2] = betAmountInt;
+									// Total Lost for integer user input
+									CALDGStats[i, 3] = totalAmountLost;
+									// Total Won for integer user input
+									CALDGStats[i, 4] = totalAmountWon;
+									// Total Matches
+									CALDGStats[i, 5] = totalMatches;
+								}
+							}
+							int k = 0;
+							for(int i = 0; i < 6; i++){ 
+								for(int j = 0; j < 6; j++){
+									CALDGStatsString[i,j] = CALDGStats[i,j].ToString();
+									CALDGEditor.PutString("CALDGStatsString" + k, CALDGStatsString[i,j]);
+									k++;
+								}
+							}
+							CALDGEditor.Apply();
 							match = 0;
 						}
 						else{

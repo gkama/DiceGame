@@ -27,6 +27,7 @@ namespace Animations
 
 		private static int SWIPE_THRESHOLD = 100;
 		private static int SWIPE_VELOCITY_THRESHOLD = 100;
+		public static String HLDG_DATA = "HLDGData";
 
 		private static readonly Random randomNum = new Random();
 		private static readonly object syncLock = new object();
@@ -61,9 +62,19 @@ namespace Animations
 			int currentAmountInt = 0;
 			int betAmountInt = 0;
 
+			int totalHighMatches = 0;
+			int totalSevenMatches = 0;
+			int totalLowMatches = 0;
+
+			int totalAmountWon = 0;
+			int totalAmountLost = 0;
+
 			highRadioButton.Click += RadioButtonClick;
 			sevenRadioButton.Click += RadioButtonClick;
 			lowRadioButton.Click += RadioButtonClick;
+
+			ISharedPreferences HLDGPrefs = GetSharedPreferences (HLDG_DATA, FileCreationMode.Private);
+			ISharedPreferencesEditor HLDGEditor = HLDGPrefs.Edit ();
 
 			// Roll the dice button
 			diceButton.Click += delegate {
@@ -95,12 +106,20 @@ namespace Animations
 						else if(currentAmountInt > 0){
 							currentAmountText.Text = currentAmountInt.ToString();
 
+							HLDGEditor.PutInt("totalAmount", currentAmountInt);
+							HLDGEditor.PutInt("totalBet", betAmountInt);
+
 							// High selected
 							if(highRadioButton.Checked == true && totalR > 7) {
 								currentAmountInt += betAmountInt;
 									
 								currentAmount.Text = currentAmountInt.ToString();
 								currentAmountText.Text = currentAmountInt.ToString();
+
+								totalHighMatches += 1;
+								totalAmountWon += betAmountInt;
+								HLDGEditor.PutInt("totalHighMatches", totalHighMatches);
+								HLDGEditor.PutInt("totalAmountWon", totalAmountWon);
 							}
 							//////
 
@@ -110,6 +129,11 @@ namespace Animations
 
 								currentAmount.Text = currentAmountInt.ToString();
 								currentAmountText.Text = currentAmountInt.ToString();
+
+								totalSevenMatches += 1;
+								totalAmountWon += betAmountInt;
+								HLDGEditor.PutInt("totalSevenMatches", totalSevenMatches);
+								HLDGEditor.PutInt("totalAmountWon", totalAmountWon);
 							}
 							//////
 
@@ -119,6 +143,11 @@ namespace Animations
 
 								currentAmount.Text = currentAmountInt.ToString();
 								currentAmountText.Text = currentAmountInt.ToString();
+
+								totalLowMatches += 1;
+								totalAmountWon += betAmountInt;
+								HLDGEditor.PutInt("totalLowMatches", totalLowMatches);
+								HLDGEditor.PutInt("totalAmountWon", totalAmountWon);
 							}
 
 							else{
@@ -126,13 +155,18 @@ namespace Animations
 
 								currentAmount.Text = currentAmountInt.ToString();
 								currentAmountText.Text = currentAmountInt.ToString();
+
+								totalAmountLost += betAmountInt;
+								HLDGEditor.PutInt("totalAmountLost", totalAmountLost);
 							}
 						}
 						//////
 
 						sumRoll.Text = totalR.ToString();
+						HLDGEditor.PutInt("totalSumRoll", totalR);
 					}
 				}
+				HLDGEditor.Apply();
 			};
 
 			// Gesture Detection
@@ -204,4 +238,3 @@ namespace Animations
 		public bool OnSingleTapUp(MotionEvent e) {return false;}
 	}
 }
-

@@ -55,8 +55,8 @@ namespace Animations
 
 			Button diceButton = FindViewById<Button> (Resource.Id.diceButton);
 
-			ISharedPreferences prefs = GetSharedPreferences (MDG_DATA, FileCreationMode.Private);
-			ISharedPreferencesEditor editor = prefs.Edit ();
+			ISharedPreferences MDGPrefs = GetSharedPreferences (MDG_DATA, FileCreationMode.Private);
+			ISharedPreferencesEditor MDGEditor = MDGPrefs.Edit ();
 			//prefs.Edit ().Clear ().Apply ();
 
 			//HashSet<String> categoryList = new HashSet<String> ();
@@ -99,30 +99,30 @@ namespace Animations
 
 				// Statistics for all categories in MDG
 				if (categoryMax == 6) {	
-					editor.PutInt("totalScoreSix", total);
-					editor.PutFloat("numberOfClicksSix", numberOfC);
-					editor.PutFloat("numberOfMathcesSix", numberOfM); }
+					MDGEditor.PutInt("totalScoreSix", total);
+					MDGEditor.PutFloat("numberOfClicksSix", numberOfC);
+					MDGEditor.PutFloat("numberOfMathcesSix", numberOfM); }
 				else if (categoryMax == 12) {	 
-					editor.PutInt("totalScoreTwelve", total);
-					editor.PutFloat("numberOfClicksTwelve", numberOfC);
-					editor.PutFloat("numberOfMathcesTwelve", numberOfM); }
+					MDGEditor.PutInt("totalScoreTwelve", total);
+					MDGEditor.PutFloat("numberOfClicksTwelve", numberOfC);
+					MDGEditor.PutFloat("numberOfMathcesTwelve", numberOfM); }
 				else if (categoryMax == 18) {	 
-					editor.PutInt("totalScoreEighteen", total);
-					editor.PutFloat("numberOfClicksEighteen", numberOfC);
-					editor.PutFloat("numberOfMathcesEighteen", numberOfM);}
+					MDGEditor.PutInt("totalScoreEighteen", total);
+					MDGEditor.PutFloat("numberOfClicksEighteen", numberOfC);
+					MDGEditor.PutFloat("numberOfMathcesEighteen", numberOfM);}
 				else if (categoryMax == 24) {	 
-					editor.PutInt("totalScoreTwentyfour", total);
-					editor.PutFloat("numberOfClicksTwentyfour", numberOfC);
-					editor.PutFloat("numberOfMathcesTwentyfour", numberOfM);}
+					MDGEditor.PutInt("totalScoreTwentyfour", total);
+					MDGEditor.PutFloat("numberOfClicksTwentyfour", numberOfC);
+					MDGEditor.PutFloat("numberOfMathcesTwentyfour", numberOfM);}
 				else if (categoryMax == 30) {	
-					editor.PutInt("totalScoreThirty", total);
-					editor.PutFloat("numberOfClicksThirty", numberOfC);
-					editor.PutFloat("numberOfMathcesThirty", numberOfM);}
+					MDGEditor.PutInt("totalScoreThirty", total);
+					MDGEditor.PutFloat("numberOfClicksThirty", numberOfC);
+					MDGEditor.PutFloat("numberOfMathcesThirty", numberOfM);}
 				else if (categoryMax == 36) {	
-					editor.PutInt("totalScoreThirtysix", total);
-					editor.PutFloat("numberOfClicksThirtysix", numberOfC);
-					editor.PutFloat("numberOfMathcesThirtysix", numberOfM);}
-				editor.Apply ();
+					MDGEditor.PutInt("totalScoreThirtysix", total);
+					MDGEditor.PutFloat("numberOfClicksThirtysix", numberOfC);
+					MDGEditor.PutFloat("numberOfMathcesThirtysix", numberOfM);}
+				MDGEditor.Apply ();
 			};
 
 
