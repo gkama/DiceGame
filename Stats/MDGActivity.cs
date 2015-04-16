@@ -99,8 +99,6 @@ namespace Animations
 			"Total Number of Clicks: " + numberOfClicksThirtysix + "\n" +
 			"Total Number of Matches: " + numberOfMathcesThirtysix + "\n";
 
-			HLDGEditor.Clear ().Apply ();
-
 			// Gesture Detection
 			gestureDetector = new GestureDetector(this);
 		}

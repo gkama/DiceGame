@@ -116,7 +116,6 @@ namespace Animations
 			"Total Won: " + totalWonSix + "\n" +
 			"Total Matches: " + totalMatchesSix + "\n";
 
-			CALDGEditor.Clear ().Apply ();
 		}
 	}
 }

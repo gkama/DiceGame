@@ -49,7 +49,6 @@ namespace Animations
 			"Total Amount Won: " + totalAmountWon + "\n" +
 			"Total Amount Lost: " + totalAmountLost + "\n";
 
-			HLDGEditor.Clear ().Apply ();
 		}
 	}
 }
