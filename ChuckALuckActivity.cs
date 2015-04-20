@@ -53,7 +53,7 @@ namespace Animations
 			var userInput = FindViewById<EditText> (Resource.Id.userInput);
 			var betAmount = FindViewById<EditText> (Resource.Id.betAmount);
 
-			userInput.Text = "Input: Please enter a number 1-6";
+			userInput.Text = "Input:1-6";
 
 			Button diceButton = FindViewById<Button> (Resource.Id.diceButton);
 
@@ -83,13 +83,16 @@ namespace Animations
 			diceButton.Click += delegate {
 				// Check user input
 				if((Int32.TryParse(currentAmount.Text.ToString(), out currentAmountInt)) && (Int32.TryParse(betAmount.Text.ToString(), out betAmountInt))){
-					if(currentAmountInt == 0 && betAmountInt == 0) { Toast.MakeText (this, "Both money fields are Empty!", ToastLength.Long).Show(); }
-					else if(currentAmountInt == 0) { Toast.MakeText (this, "Current Amount or Current Bet is Empty!", ToastLength.Long).Show(); }
-					else if(betAmountInt == 0) { Toast.MakeText (this, "Current Amount or Current Bet is Empty!", ToastLength.Long).Show(); }
-					else if(betAmountInt > currentAmountInt) { Toast.MakeText (this, "Bet is bigger than Current Amount!", ToastLength.Long).Show(); }
+					if(currentAmountInt == 0 && betAmountInt == 0) { Toast.MakeText (this, "Fields are empty", ToastLength.Long).Show(); }
+					else if(currentAmountInt == 0) { Toast.MakeText (this, "Total Amount is 0", ToastLength.Long).Show(); }
+					else if(betAmountInt == 0) { Toast.MakeText (this, "Bet is 0", ToastLength.Long).Show(); }
+					else if(betAmountInt > currentAmountInt) { Toast.MakeText (this, "Bet is bigger than Total Amount", ToastLength.Long).Show(); }
 					else{
 						if((userInput.Text.ToString() == "1") || (userInput.Text.ToString() == "2") || (userInput.Text.ToString() == "3") ||
 				   		(userInput.Text.ToString() == "4") || (userInput.Text.ToString() == "5") || (userInput.Text.ToString() == "6")){
+
+							currentAmount.Enabled = false;
+							currentAmount.Focusable = false;
 
 							InputMethodManager closeKeyboard = (InputMethodManager)GetSystemService(Context.InputMethodService);
 							closeKeyboard.HideSoftInputFromWindow(userInput.WindowToken, 0);
@@ -135,7 +138,7 @@ namespace Animations
 								currentAmount.Text = currentAmountInt.ToString();
 								if(currentAmountInt <= 0){
 									currentAmount.Text = "0";
-									currentAmountText.Text = "Amount is less than or equal to 0!";
+									currentAmountText.Text = "Game Over!";
 								} else{
 									currentAmountText.Text = currentAmountInt.ToString();
 								}
@@ -162,6 +165,7 @@ namespace Animations
 									CALDGStats[i, 5] = totalMatches;
 								}
 							}
+							// Store stats in shared preferences
 							int k = 0;
 							for(int i = 0; i < 6; i++){ 
 								for(int j = 0; j < 6; j++){
@@ -174,9 +178,12 @@ namespace Animations
 							match = 0;
 						}
 						else{
-							errorText.Text = "Invalid Input! Try Again!";
+							errorText.Text = "Invalid Input! Try Again";
 						}
 					}
+				}
+				else{
+					Toast.MakeText (this, "Invalid Input! Try Again", ToastLength.Long).Show();
 				}
 			};
 

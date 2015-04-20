@@ -36,16 +36,25 @@ namespace Animations
 
 			SetContentView (Resource.Layout.RegularDiceScreen);
 
+			int rolls = 0;
+
 			var numberResult = FindViewById<TextView> (Resource.Id.numberResult);
+			var rollsText = FindViewById<TextView> (Resource.Id.rollsText);
+			var regulardieText = FindViewById<TextView> (Resource.Id.regulardieText);
 
 			Button diceButton = FindViewById<Button> (Resource.Id.diceButton);
 
-			numberResult.TextSize = 140;
+			numberResult.TextSize = 200;
+
+			regulardieText.TextSize = 35;
 
 			// Roll the dice button
 			diceButton.Click += delegate {
 				int resultR = RandomNumber (1, 6);
+				rolls += 1;
+
 				numberResult.Text = resultR.ToString ();
+				rollsText.Text = "Rolls: " + rolls.ToString();
 			};
 
 			// Gesture Detection

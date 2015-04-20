@@ -20,25 +20,14 @@
             android:id="@+id/space1"
             android:layout_width="1dp" />
         <TextView
-            android:text="REGULAR DIE: "
+            android:text="Regular Die: 1-6"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:id="@+id/regulardieText"
             android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_marginLeft="25dp" />
-        <TextView
-            android:text="1-6"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:id="@+id/categoryText"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_marginRight="30dp" />
+            android:layout_gravity="center" />
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
@@ -50,7 +39,7 @@
         android:layout_gravity="center"
         android:gravity="center">
         <Button
-            android:text="Roll the die!"
+            android:text="Roll the die"
             android:textStyle="bold"
             android:layout_width="170dp"
             android:layout_height="130dp"
@@ -59,6 +48,14 @@
             style="@style/grey_button"
             android:gravity="center"
             android:background="@drawable/greybutton" />
+        <TextView
+            android:text="Rolls: 0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/rollsText"
+            android:gravity="center" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"

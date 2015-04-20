@@ -66,7 +66,7 @@ namespace Animations
 			categoryText.TextSize = 25;
 			titleText.TextSize = 27;
 
-			categoryText.Text = "CATEGORY: 1-" + categoryMax;
+			categoryText.Text = "Category: 1-" + categoryMax;
 
 			// Radio Buttons clicked
 			diceButton.Click += delegate {

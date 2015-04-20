@@ -19,7 +19,7 @@ using Android.Widget;
 
 namespace Animations
 {
-	[Activity (Label = "Dice Master", Icon = "@drawable/dicemastericon")]			
+	[Activity (Label = "Dice Master", Icon = "@drawable/dicemastericon", LaunchMode = Android.Content.PM.LaunchMode.SingleInstance)]			
 	public class DiceCategoriesActivity : Activity, GestureDetector.IOnGestureListener
 	{
 		private GestureDetector gestureDetector;
@@ -39,6 +39,17 @@ namespace Animations
 			Button oneTwentyfour = FindViewById<Button>(Resource.Id.oneTwentyfour);
 			Button oneThirty = FindViewById<Button>(Resource.Id.oneThirty);
 			Button oneThirtysix = FindViewById<Button>(Resource.Id.oneThirtysix);
+
+			TextView chooseacategoryText = FindViewById<TextView> (Resource.Id.chooseacategoryText);
+
+			chooseacategoryText.TextSize = 35;
+
+			oneSix.TextSize = 15;
+			oneTwelve.TextSize = 15;
+			oneEighteen.TextSize = 15;
+			oneTwentyfour.TextSize = 15;
+			oneThirty.TextSize = 15;
+			oneThirtysix.TextSize = 15;
 
 			oneSix.Click += delegate {
 				string categoryMax = "6";

@@ -29,6 +29,8 @@ namespace Animations
 		{
 			base.OnCreate (bundle);
 
+			var scrollView = FindViewById<TextView> (Resource.Id.scrollView);
+
 			SetContentView (Resource.Layout.AboutScreen);
 
 			var regulardieText = FindViewById<TextView> (Resource.Id.regulardieText);
@@ -56,9 +58,16 @@ namespace Animations
 				"Recommended for Single/Multi player!\n";
 
 			chuckaluckdicegameText.Text = "Chuck-A-Luck Dice Game: In the game of Chuck-A-Luck the player selects an integer from 1 to 6, and then 3 dice are rolled. " +
-				"If exactly k dice show the player's number, the payoff is k:1. A player can select the outcome via the provided radio buttons. A mathematical assumption " +
-				"is that the dice are fair. Additionally, the game shows the number of matches in the bottom of the screen.\n" +
-				"Recommended for Single/Multi player!\n";
+			"If exactly k dice show the player's number, the payoff is k:1. A player can select the outcome via the provided radio buttons. A mathematical assumption " +
+			"is that the dice are fair. Additionally, the game shows the number of matches in the bottom of the screen.\n" +
+			"Recommended for Single/Multi player!\n\n" +
+
+			"Additional Information:\n" +
+			"STATS: There is a STATS screen where it shows the latest game scores for each game. They differ with each game and show your latest progress. " +
+			"Also, the statistics will be overwritten once the game is restarted, but fields that are not played will not get overwritten, they will show your latest game scores.\n\n" +
+
+			"You can swipe right on main screen to go to the STATS screen or you can simply press the button. " +
+			"Also, you can swipe left where applicable to go back to the previous opened screen except this one!";
 
 			authorText.TextSize = 15;
 			authorText.Text = "\nAuthor: Georgi Kamacharov\n";

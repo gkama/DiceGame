@@ -17,7 +17,7 @@ using Android.Animation;
 
 namespace Animations
 {
-	[Activity (Label = "Dice Master", MainLauncher = true, Icon = "@drawable/dicemastericon")]
+	[Activity (Label = "Dice Master", MainLauncher = true, Icon = "@drawable/dicemastericon", LaunchMode = Android.Content.PM.LaunchMode.SingleInstance)]
 	public class MainActivity : Activity, GestureDetector.IOnGestureListener
 	{
 		private GestureDetector gestureDetector;
@@ -37,6 +37,16 @@ namespace Animations
 			Button taketoChuckALuckGameButton = FindViewById<Button> (Resource.Id.taketoChuckALuckGameButton);
 			Button aboutButton = FindViewById<Button> (Resource.Id.aboutButton);
 			Button statsButton = FindViewById<Button> (Resource.Id.statsButton);
+
+			TextView dicemasterTitle = FindViewById<TextView> (Resource.Id.dicemasterTitle);
+			dicemasterTitle.TextSize = 40;
+
+			taketoRegularDiceGameButton.TextSize = 15;
+			taketoDiceButton.TextSize = 15;
+			taketoHighLowDieGameButton.TextSize = 15;
+			taketoChuckALuckGameButton.TextSize = 15;
+			aboutButton.TextSize = 15;
+			statsButton.TextSize = 15;
 
 			taketoDiceButton.Click += delegate {
 				Intent slideIntent = new Intent(this, typeof(DiceCategoriesActivity));

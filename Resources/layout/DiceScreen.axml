@@ -33,7 +33,7 @@
             android:layout_gravity="center"
             android:gravity="center" />
         <Button
-            android:text="Roll your die!"
+            android:text="Roll your die"
             android:textStyle="bold"
             android:layout_width="160dp"
             android:layout_height="120dp"

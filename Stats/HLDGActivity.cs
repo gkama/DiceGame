@@ -39,7 +39,7 @@ namespace Animations
 			int totalSumRoll = HLDGPref.GetInt ("totalSumRoll", 0);
 
 
-			HLDGStatsView.Text = "LATEST GAME SCORES:\n " +
+			HLDGStatsView.Text = "HIGH-LOW LATEST GAME SCORES:\n" +
 			"Latest Amount: " + (totalAmount + totalBet) + "\n" +
 			"Latest Bet: " + totalBet + "\n" +
 			"Lates Sum Roll: " + totalSumRoll + "\n" +
@@ -48,7 +48,6 @@ namespace Animations
 			"Total Low Matches: " + totalLowMatches + "\n" +
 			"Total Amount Won: " + totalAmountWon + "\n" +
 			"Total Amount Lost: " + totalAmountLost + "\n";
-
 		}
 	}
 }

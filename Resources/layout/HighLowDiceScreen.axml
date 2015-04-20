@@ -37,12 +37,13 @@
                 android:gravity="center" />
             <EditText
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/currentAmount"
                 android:gravity="center"
                 android:text="0"
-                android:textColor="#ffff0000" />
+                android:textColor="#ffff0000"
+                android:selectAllOnFocus="true" />
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
@@ -57,7 +58,7 @@
                 android:id="@+id/moneyImage"
                 android:layout_gravity="right" />
             <TextView
-                android:text="Enter Bet: $"
+                android:text="        Enter Bet: $"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -66,15 +67,16 @@
                 android:gravity="center" />
             <EditText
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/betAmount"
                 android:gravity="center"
                 android:text="0"
-                android:textColor="#ffff0000" />
+                android:textColor="#ffff0000"
+                android:selectAllOnFocus="true" />
         </LinearLayout>
         <TextView
-            android:text="HIGH-LOW DICE - 1-6 FOR BOTH"
+            android:text="High-Low Dice: 1-6 for both"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -119,7 +121,7 @@
             </RadioGroup>
         </LinearLayout>
         <Button
-            android:text="Roll the dice!"
+            android:text="Roll the dice"
             android:textStyle="bold"
             android:layout_width="170dp"
             android:layout_height="130dp"

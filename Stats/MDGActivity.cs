@@ -14,12 +14,8 @@ using Android.Widget;
 namespace Animations
 {
 	[Activity (Label = "MDGActivity")]			
-	public class MDGActivity : Activity, GestureDetector.IOnGestureListener
+	public class MDGActivity : Activity
 	{
-		private GestureDetector gestureDetector;
-
-		private static int SWIPE_THRESHOLD = 100;
-		private static int SWIPE_VELOCITY_THRESHOLD = 100;
 		public static String MDG_DATA = "MDGData";
 
 		protected override void OnCreate (Bundle savedInstanceState)
@@ -68,7 +64,7 @@ namespace Animations
 
 
 
-			MDGStatsView.Text = "LATEST GAME SCORES:\n" +
+			MDGStatsView.Text = "MATCHING DICE GAME LATEST GAME SCORES:\n" +
 			"Category: 1-6\n" +
 			"Total Score: " + totalScoreSix + "\n" +
 			"Total Number of Clicks: " + numberOfClicksSix + "\n" +
@@ -98,62 +94,7 @@ namespace Animations
 			"Total Score: " + totalScoreThirtysix + "\n" +
 			"Total Number of Clicks: " + numberOfClicksThirtysix + "\n" +
 			"Total Number of Matches: " + numberOfMathcesThirtysix + "\n";
-
-			// Gesture Detection
-			gestureDetector = new GestureDetector(this);
 		}
-
-		// Gestures
-		public override bool OnTouchEvent(MotionEvent e)
-		{
-			gestureDetector.OnTouchEvent(e);
-			return true;
-		}
-		public bool OnDown(MotionEvent e) {return true;}
-
-		// Used for Swiping
-		public bool OnFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY)
-		{
-			float diffY = e2.GetY() - e1.GetY();
-			float diffX = e2.GetX() - e1.GetX();
-
-			if (Math.Abs(diffX) > Math.Abs(diffY))
-			{
-				if (Math.Abs(diffX) > SWIPE_THRESHOLD && Math.Abs(velocityX) > SWIPE_VELOCITY_THRESHOLD)
-				{
-					if (diffX > 0)
-					{
-						// Left Swipe - go back
-						Intent slideIntent = new Intent(this, typeof(MainActivity));
-						Bundle slideAnim = ActivityOptions.MakeCustomAnimation(Application.Context, Resource.Animation.Anim3, Resource.Animation.Anim4).ToBundle();
-						StartActivity(slideIntent, slideAnim);
-						Finish ();
-					}
-					else
-					{
-						// Right Swipe
-
-					}
-				}
-			}
-			else if (Math.Abs(diffY) > SWIPE_THRESHOLD && Math.Abs(velocityY) > SWIPE_VELOCITY_THRESHOLD)
-			{
-				if (diffY > 0)
-				{
-					// Top swipe
-				}
-				else
-				{
-					// Bottom swipe
-				}
-			}
-			return true;
-		}
-		//
-		public void OnLongPress(MotionEvent e) {}
-		public bool OnScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {return false;}
-		public void OnShowPress(MotionEvent e) {}
-		public bool OnSingleTapUp(MotionEvent e) {return false;}
 	}
 }
 

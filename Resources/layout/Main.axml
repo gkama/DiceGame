@@ -4,37 +4,17 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/background">
-    <LinearLayout
-        android:orientation="horizontal"
+    <TextView
+        android:text="Dice Master"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@drawable/background">
-        <Space
-            android:layout_width="110dp"
-            android:layout_height="match_parent"
-            android:id="@+id/space2" />
-        <TextView
-            android:text="DICE MASTER"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/title"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_marginBottom="12dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="35dp" />
-        <Button
-            android:text="Stats"
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:id="@+id/statsButton"
-            style="@style/grey_button"
-            android:background="@drawable/statsbutton" />
-    </LinearLayout>
+        android:layout_height="70dp"
+        android:textStyle="bold"
+        android:id="@+id/dicemasterTitle"
+        android:layout_gravity="center"
+        android:gravity="center" />
     <Button
-        android:text="Regular Die!"
+        android:text="Regular Die"
         android:textStyle="bold"
         android:layout_width="250dp"
         android:layout_height="60dp"
@@ -42,9 +22,10 @@
         android:background="@drawable/greybutton"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        style="@style/grey_button" />
+        style="@style/grey_button"
+        android:capitalize="none" />
     <Button
-        android:text="Matching Dice Game!"
+        android:text="Matching Dice Game"
         android:textStyle="bold"
         android:layout_width="250dp"
         android:layout_height="60dp"
@@ -54,7 +35,7 @@
         android:layout_marginTop="10dp"
         style="@style/grey_button" />
     <Button
-        android:text="High-Low Dice Game!"
+        android:text="High-Low Dice Game"
         android:textStyle="bold"
         android:layout_width="250dp"
         android:layout_height="60dp"
@@ -64,7 +45,7 @@
         android:layout_marginTop="10dp"
         style="@style/grey_button" />
     <Button
-        android:text="Chuck-A-Luck Dice Game!"
+        android:text="Chuck-A-Luck Dice Game"
         android:textStyle="bold"
         android:layout_width="250dp"
         android:layout_height="65dp"
@@ -73,9 +54,18 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         style="@style/grey_button" />
+    <Button
+        android:text="Stats"
+        android:id="@+id/statsButton"
+        style="@style/grey_button"
+        android:background="@drawable/statsbutton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp" />
     <Space
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="10dp"
         android:id="@+id/space1" />
     <Button
         android:text="About"

@@ -79,11 +79,14 @@ namespace Animations
 			// Roll the dice button
 			diceButton.Click += delegate {
 				if((Int32.TryParse(currentAmount.Text.ToString(), out currentAmountInt)) && (Int32.TryParse(betAmount.Text.ToString(), out betAmountInt))){
-					if(currentAmountInt == 0 && betAmountInt == 0) { Toast.MakeText (this, "Both money fields are Empty!", ToastLength.Long).Show(); }
-					else if(currentAmountInt == 0) { Toast.MakeText (this, "Current Amount or Current Bet is Empty!", ToastLength.Long).Show(); }
-					else if(betAmountInt == 0) { Toast.MakeText (this, "Current Amount or Current Bet is Empty!", ToastLength.Long).Show(); }
-					else if(betAmountInt > currentAmountInt) { Toast.MakeText (this, "Bet is bigger than Current Amount!", ToastLength.Long).Show(); }
+					if(currentAmountInt == 0 && betAmountInt == 0) { Toast.MakeText (this, "Fields are 0", ToastLength.Long).Show(); }
+					else if(currentAmountInt == 0) { Toast.MakeText (this, "Total Amount is 0", ToastLength.Long).Show();}
+					else if(betAmountInt == 0) { Toast.MakeText (this, "Bet is 0", ToastLength.Long).Show(); }
+					else if(betAmountInt > currentAmountInt) { Toast.MakeText (this, "Bet is bigger than Total Amount", ToastLength.Long).Show(); }
 					else{
+
+						currentAmount.Enabled = false;
+						currentAmount.Focusable = false;
 
 						InputMethodManager closeKeyboard = (InputMethodManager)GetSystemService(Context.InputMethodService);
 						closeKeyboard.HideSoftInputFromWindow(betAmount.WindowToken, 0);
@@ -99,15 +102,8 @@ namespace Animations
 						else if(totalR < 7){ highlowText.Text = "It's LOW!";}
 						else { highlowText.Text = "It's SEVEN!";}
 
-						if(currentAmountInt <= 0){
-							currentAmount.Text = "0";
-							currentAmountText.Text = "Amount is less than or equal to 0!";
-						} 
-						else if(currentAmountInt > 0){
+						if(currentAmountInt > 0){
 							currentAmountText.Text = currentAmountInt.ToString();
-
-							HLDGEditor.PutInt("totalAmount", currentAmountInt);
-							HLDGEditor.PutInt("totalBet", betAmountInt);
 
 							// High selected
 							if(highRadioButton.Checked == true && totalR > 7) {
@@ -158,13 +154,23 @@ namespace Animations
 
 								totalAmountLost += betAmountInt;
 								HLDGEditor.PutInt("totalAmountLost", totalAmountLost);
+
+								if(currentAmountInt <= 0){
+									currentAmount.Text = "0";
+									currentAmountText.Text = "Game Over!";
+								} 
 							}
 						}
-						//////
+
+						HLDGEditor.PutInt("totalAmount", currentAmountInt - betAmountInt);
+						HLDGEditor.PutInt("totalBet", betAmountInt);
 
 						sumRoll.Text = totalR.ToString();
 						HLDGEditor.PutInt("totalSumRoll", totalR);
 					}
+				}
+				else{
+					Toast.MakeText (this, "Invalid Input! Try Again", ToastLength.Long).Show();
 				}
 				HLDGEditor.Apply();
 			};

@@ -37,12 +37,13 @@
                 android:gravity="center" />
             <EditText
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:layout_width="wrap_content"
+                android:layout_width="110dp"
                 android:layout_height="match_parent"
                 android:id="@+id/currentAmount"
                 android:gravity="center"
                 android:text="0"
-                android:textColor="#ffff0000" />
+                android:textColor="#ffff0000"
+                android:selectAllOnFocus="true" />
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
@@ -56,7 +57,7 @@
                 android:id="@+id/moneyImage"
                 android:layout_gravity="right" />
             <TextView
-                android:text="Enter Bet: $"
+                android:text="        Enter Bet: $"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -65,15 +66,23 @@
                 android:gravity="center" />
             <EditText
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:layout_width="wrap_content"
+                android:layout_width="110dp"
                 android:layout_height="match_parent"
                 android:id="@+id/betAmount"
                 android:gravity="center"
                 android:text="0"
-                android:textColor="#ffff0000" />
+                android:textColor="#ffff0000"
+                android:selectAllOnFocus="true" />
         </LinearLayout>
         <TextView
-            android:text="CHUCK-A-LUCK DICE"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/categoryText"
+            android:gravity="center" />
+        <TextView
+            android:text="Chuck-A-Luck Dice: 1-6"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -81,16 +90,8 @@
             android:id="@+id/regulardieText"
             android:gravity="center"
             android:layout_gravity="center" />
-        <TextView
-            android:text="1-6 FOR ALL THREE"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:id="@+id/categoryText"
-            android:gravity="center" />
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="35dp"
             android:id="@+id/userInput"
             android:gravity="center"
@@ -107,7 +108,7 @@
             android:id="@+id/errorText"
             android:gravity="center" />
         <Button
-            android:text="Roll the dice!"
+            android:text="Roll the dice"
             android:textStyle="bold"
             android:layout_width="170dp"
             android:layout_height="130dp"
@@ -123,12 +124,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/currentAmountText"
             android:layout_gravity="center"
-            android:textColor="#ffff0000" />
+            android:textColor="#ffff0000"
+            android:layout_marginBottom="5dp" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="225dp"
+        android:layout_height="210dp"
         android:layout_weight="1"
         android:layout_gravity="center"
         android:gravity="center"

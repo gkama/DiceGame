@@ -31,49 +31,49 @@ namespace Animations
 			ISharedPreferences CALDGPref = GetSharedPreferences (CALDG_DATA, FileCreationMode.Private);
 			ISharedPreferencesEditor CALDGEditor = CALDGPref.Edit ();
 
-			String userInputOne = CALDGPref.GetString ("CALDGStatsString0", String.Empty);
-			String latestAmountOne = CALDGPref.GetString ("CALDGStatsString1", String.Empty);
-			String latestBetOne = CALDGPref.GetString ("CALDGStatsString2", String.Empty);
-			String totalLostOne = CALDGPref.GetString ("CALDGStatsString3", String.Empty);
-			String totalWonOne = CALDGPref.GetString ("CALDGStatsString4", String.Empty);
-			String totalMatchesOne = CALDGPref.GetString ("CALDGStatsString5", String.Empty);
+			String userInputOne = CALDGPref.GetString ("CALDGStatsString0", "0");
+			String latestAmountOne = CALDGPref.GetString ("CALDGStatsString1", "0");
+			String latestBetOne = CALDGPref.GetString ("CALDGStatsString2", "0");
+			String totalLostOne = CALDGPref.GetString ("CALDGStatsString3", "0");
+			String totalWonOne = CALDGPref.GetString ("CALDGStatsString4", "0");
+			String totalMatchesOne = CALDGPref.GetString ("CALDGStatsString5", "0");
 
-			String userInputTwo = CALDGPref.GetString ("CALDGStatsString6", String.Empty);
-			String latestAmountTwo = CALDGPref.GetString ("CALDGStatsString7", String.Empty);
-			String latestBetTwo = CALDGPref.GetString ("CALDGStatsString8", String.Empty);
-			String totalLostTwo = CALDGPref.GetString ("CALDGStatsString9", String.Empty);
-			String totalWonTwo = CALDGPref.GetString ("CALDGStatsString10", String.Empty);
-			String totalMatchesTwo = CALDGPref.GetString ("CALDGStatsString11", String.Empty);
+			String userInputTwo = CALDGPref.GetString ("CALDGStatsString6", "0");
+			String latestAmountTwo = CALDGPref.GetString ("CALDGStatsString7", "0");
+			String latestBetTwo = CALDGPref.GetString ("CALDGStatsString8", "0");
+			String totalLostTwo = CALDGPref.GetString ("CALDGStatsString9", "0");
+			String totalWonTwo = CALDGPref.GetString ("CALDGStatsString10", "0");
+			String totalMatchesTwo = CALDGPref.GetString ("CALDGStatsString11", "0");
 
-			String userInputThree = CALDGPref.GetString ("CALDGStatsString12", String.Empty);
-			String latestAmountThree = CALDGPref.GetString ("CALDGStatsString13", String.Empty);
-			String latestBetThree = CALDGPref.GetString ("CALDGStatsString14", String.Empty);
-			String totalLostThree = CALDGPref.GetString ("CALDGStatsString15", String.Empty);
-			String totalWonThree = CALDGPref.GetString ("CALDGStatsString16", String.Empty);
-			String totalMatchesThree = CALDGPref.GetString ("CALDGStatsString17", String.Empty);
+			String userInputThree = CALDGPref.GetString ("CALDGStatsString12", "0");
+			String latestAmountThree = CALDGPref.GetString ("CALDGStatsString13", "0");
+			String latestBetThree = CALDGPref.GetString ("CALDGStatsString14", "0");
+			String totalLostThree = CALDGPref.GetString ("CALDGStatsString15", "0");
+			String totalWonThree = CALDGPref.GetString ("CALDGStatsString16", "0");
+			String totalMatchesThree = CALDGPref.GetString ("CALDGStatsString17", "0");
 
-			String userInputFour = CALDGPref.GetString ("CALDGStatsString18", String.Empty);
-			String latestAmountFour = CALDGPref.GetString ("CALDGStatsString19", String.Empty);
-			String latestBetFour = CALDGPref.GetString ("CALDGStatsString20", String.Empty);
-			String totalLostFour = CALDGPref.GetString ("CALDGStatsString21", String.Empty);
-			String totalWonFour = CALDGPref.GetString ("CALDGStatsString22", String.Empty);
-			String totalMatchesFour = CALDGPref.GetString ("CALDGStatsString23", String.Empty);
+			String userInputFour = CALDGPref.GetString ("CALDGStatsString18", "0");
+			String latestAmountFour = CALDGPref.GetString ("CALDGStatsString19", "0");
+			String latestBetFour = CALDGPref.GetString ("CALDGStatsString20", "0");
+			String totalLostFour = CALDGPref.GetString ("CALDGStatsString21", "0");
+			String totalWonFour = CALDGPref.GetString ("CALDGStatsString22", "0");
+			String totalMatchesFour = CALDGPref.GetString ("CALDGStatsString23", "0");
 
-			String userInputFive = CALDGPref.GetString ("CALDGStatsString24", String.Empty);
-			String latestAmountFive = CALDGPref.GetString ("CALDGStatsString25", String.Empty);
-			String latestBetFive = CALDGPref.GetString ("CALDGStatsString26", String.Empty);
-			String totalLostFive = CALDGPref.GetString ("CALDGStatsString27", String.Empty);
-			String totalWonFive = CALDGPref.GetString ("CALDGStatsString28", String.Empty);
-			String totalMatchesFive = CALDGPref.GetString ("CALDGStatsString29", String.Empty);
+			String userInputFive = CALDGPref.GetString ("CALDGStatsString24", "0");
+			String latestAmountFive = CALDGPref.GetString ("CALDGStatsString25", "0");
+			String latestBetFive = CALDGPref.GetString ("CALDGStatsString26", "0");
+			String totalLostFive = CALDGPref.GetString ("CALDGStatsString27", "0");
+			String totalWonFive = CALDGPref.GetString ("CALDGStatsString28", "0");
+			String totalMatchesFive = CALDGPref.GetString ("CALDGStatsString29", "0");
 
-			String userInputSix = CALDGPref.GetString ("CALDGStatsString30", String.Empty);
-			String latestAmountSix = CALDGPref.GetString ("CALDGStatsString31", String.Empty);
-			String latestBetSix = CALDGPref.GetString ("CALDGStatsString32", String.Empty);
-			String totalLostSix = CALDGPref.GetString ("CALDGStatsString33", String.Empty);
-			String totalWonSix = CALDGPref.GetString ("CALDGStatsString34", String.Empty);
-			String totalMatchesSix = CALDGPref.GetString ("CALDGStatsString35", String.Empty);
+			String userInputSix = CALDGPref.GetString ("CALDGStatsString30", "0");
+			String latestAmountSix = CALDGPref.GetString ("CALDGStatsString31", "0");
+			String latestBetSix = CALDGPref.GetString ("CALDGStatsString32", "0");
+			String totalLostSix = CALDGPref.GetString ("CALDGStatsString33", "0");
+			String totalWonSix = CALDGPref.GetString ("CALDGStatsString34", "0");
+			String totalMatchesSix = CALDGPref.GetString ("CALDGStatsString35", "0");
 
-			CALDGStatsView.Text = "LATEST GAME SCORES:\n" +
+			CALDGStatsView.Text = "CHUCK-A-LUCK LATEST GAME SCORES:\n" +
 			"User Input: " + userInputOne + "\n" +
 			"Latest Amount: " + latestAmountOne + "\n" +
 			"Latest Bet: " + latestBetOne + "\n" +
