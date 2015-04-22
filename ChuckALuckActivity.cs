@@ -21,7 +21,7 @@ using Android.Views.InputMethods;
 
 namespace Animations
 {
-	[Activity (Label = "Dice Master", Icon = "@drawable/dicemastericon")]			
+	[Activity (Label = "Dice Master", Icon = "@drawable/Dice")]			
 	public class ChuckALuckActivity : Activity, GestureDetector.IOnGestureListener
 	{
 		private GestureDetector gestureDetector;

@@ -42,7 +42,7 @@
                 android:id="@+id/currentAmount"
                 android:gravity="center"
                 android:text="0"
-                android:textColor="#ffff0000"
+                android:textColor="#ff00fff5"
                 android:selectAllOnFocus="true" />
         </LinearLayout>
         <LinearLayout
@@ -72,7 +72,7 @@
                 android:id="@+id/betAmount"
                 android:gravity="center"
                 android:text="0"
-                android:textColor="#ffff0000"
+                android:textColor="#ff00fff5"
                 android:selectAllOnFocus="true" />
         </LinearLayout>
         <TextView
@@ -107,17 +107,20 @@
                     android:layout_height="wrap_content"
                     android:checked="true"
                     android:text="High"
-                    android:id="@+id/highRadioButton" />
+                    android:id="@+id/highRadioButton"
+                    android:textColor="#ff00fff5" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Seven"
-                    android:id="@+id/sevenRadioButton" />
+                    android:id="@+id/sevenRadioButton"
+                    android:textColor="#ff00fff5" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Low"
-                    android:id="@+id/lowRadioButton" />
+                    android:id="@+id/lowRadioButton"
+                    android:textColor="#ff00fff5" />
             </RadioGroup>
         </LinearLayout>
         <Button
@@ -137,7 +140,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/currentAmountText"
             android:layout_gravity="center"
-            android:textColor="#ffff0000" />
+            android:textColor="#ff00fff5" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -169,7 +172,8 @@
         android:id="@+id/sumRoll"
         android:textStyle="bold"
         android:gravity="center"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:textColor="#ff00fff5" />
     <TextView
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="wrap_content"
@@ -179,5 +183,6 @@
         android:textStyle="bold"
         android:layout_marginTop="3dp"
         android:layout_marginBottom="10dp"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:textColor="#ff00fff5" />
 </LinearLayout>

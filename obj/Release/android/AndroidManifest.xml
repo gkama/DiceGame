@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="animations.animations">
+  <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="19" />
+  <application android:label="Dice Master" android:icon="@drawable/dice" android:debuggable="false" android:name="mono.android.app.Application">
+    <activity android:icon="@drawable/dice" android:label="Dice Master" android:launchMode="singleInstance" android:name="animations.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:icon="@drawable/dice" android:label="Dice Master" android:name="animations.DiceActivity" />
+    <activity android:icon="@drawable/dice" android:label="Dice Master" android:launchMode="singleInstance" android:name="animations.DiceCategoriesActivity" />
+    <activity android:icon="@drawable/dice" android:label="Dice Master" android:name="animations.RegularDiceActivity" />
+    <activity android:icon="@drawable/dice" android:label="Dice Master" android:name="animations.HighLowDiceActivity" />
+    <activity android:icon="@drawable/dice" android:label="Dice Master" android:name="animations.ChuckALuckActivity" />
+    <activity android:icon="@drawable/dice" android:label="Dice Master" android:name="animations.AboutActivity" />
+    <activity android:icon="@drawable/dice" android:label="Dice Master" android:name="animations.StatsActivity" />
+    <activity android:label="MDGActivity" android:name="animations.MDGActivity" />
+    <activity android:label="HLDGActivity" android:name="animations.HLDGActivity" />
+    <activity android:label="CALDGActivity" android:name="animations.CALDGActivity" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="animations.animations.mono.MonoRuntimeProvider.__mono_init__" />
+  </application>
+</manifest>

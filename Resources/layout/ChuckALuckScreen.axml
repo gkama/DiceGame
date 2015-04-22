@@ -42,7 +42,7 @@
                 android:id="@+id/currentAmount"
                 android:gravity="center"
                 android:text="0"
-                android:textColor="#ffff0000"
+                android:textColor="#ff00fff5"
                 android:selectAllOnFocus="true" />
         </LinearLayout>
         <LinearLayout
@@ -71,7 +71,7 @@
                 android:id="@+id/betAmount"
                 android:gravity="center"
                 android:text="0"
-                android:textColor="#ffff0000"
+                android:textColor="#ff00fff5"
                 android:selectAllOnFocus="true" />
         </LinearLayout>
         <TextView
@@ -100,7 +100,8 @@
             android:inputType="text"
             android:numeric="integer"
             android:enabled="true"
-            android:selectAllOnFocus="true" />
+            android:selectAllOnFocus="true"
+            android:textColor="#ff00fff5" />
         <TextView
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
@@ -124,7 +125,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/currentAmountText"
             android:layout_gravity="center"
-            android:textColor="#ffff0000"
+            android:textColor="#ff00fff5"
             android:layout_marginBottom="5dp" />
     </LinearLayout>
     <LinearLayout

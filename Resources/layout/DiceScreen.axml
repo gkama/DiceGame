@@ -63,7 +63,7 @@
         android:layout_height="150dp"
         android:id="@+id/matchNumber"
         android:layout_gravity="center"
-        android:textColor="@android:color/holo_red_dark"
+        android:textColor="#ff00fff5"
         android:gravity="center" />
     <TextView
         android:textAppearance="?android:attr/textAppearanceMedium"

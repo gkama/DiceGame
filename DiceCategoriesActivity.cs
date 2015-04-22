@@ -19,7 +19,7 @@ using Android.Widget;
 
 namespace Animations
 {
-	[Activity (Label = "Dice Master", Icon = "@drawable/dicemastericon", LaunchMode = Android.Content.PM.LaunchMode.SingleInstance)]			
+	[Activity (Label = "Dice Master", Icon = "@drawable/Dice", LaunchMode = Android.Content.PM.LaunchMode.SingleInstance)]			
 	public class DiceCategoriesActivity : Activity, GestureDetector.IOnGestureListener
 	{
 		private GestureDetector gestureDetector;

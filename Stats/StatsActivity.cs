@@ -17,7 +17,7 @@ using Android.Animation;
 
 namespace Animations
 {
-	[Activity (Label = "Dice Master", Icon = "@drawable/dicemastericon")]
+	[Activity (Label = "Dice Master", Icon = "@drawable/Dice")]
 	public class StatsActivity : TabActivity, GestureDetector.IOnGestureListener
 	{
 		private GestureDetector gestureDetector;
@@ -31,9 +31,9 @@ namespace Animations
 
 			SetContentView (Resource.Layout.StatsScreen);
 
-			CreateTab (typeof(MDGActivity), "mdg", "MDG", Resource.Drawable.tabIcon);
-			CreateTab (typeof(HLDGActivity), "hldg", "HLDG", Resource.Drawable.tabIcon);
-			CreateTab (typeof(CALDGActivity), "caldg", "CALDG", Resource.Drawable.tabIcon);
+			CreateTab (typeof(MDGActivity), "mdg", "MDG", Resource.Drawable.background);
+			CreateTab (typeof(HLDGActivity), "hldg", "HLDG", Resource.Drawable.background);
+			CreateTab (typeof(CALDGActivity), "caldg", "CALDG", Resource.Drawable.background);
 
 			// Gesture Detection
 			gestureDetector = new GestureDetector(this);

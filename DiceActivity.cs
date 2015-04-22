@@ -17,7 +17,7 @@ using Android.OS;
 
 namespace Animations
 {
-	[Activity (Label = "Dice Master", Icon = "@drawable/dicemastericon")]
+	[Activity (Label = "Dice Master", Icon = "@drawable/Dice")]
 	public class DiceActivity : Activity, GestureDetector.IOnGestureListener
 	{
 		private GestureDetector gestureDetector;

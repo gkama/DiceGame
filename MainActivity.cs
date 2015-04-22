@@ -17,7 +17,7 @@ using Android.Animation;
 
 namespace Animations
 {
-	[Activity (Label = "Dice Master", MainLauncher = true, Icon = "@drawable/dicemastericon", LaunchMode = Android.Content.PM.LaunchMode.SingleInstance)]
+	[Activity (Label = "Dice Master", MainLauncher = true, Icon = "@drawable/Dice", LaunchMode = Android.Content.PM.LaunchMode.SingleInstance)]
 	public class MainActivity : Activity, GestureDetector.IOnGestureListener
 	{
 		private GestureDetector gestureDetector;
@@ -52,13 +52,11 @@ namespace Animations
 				Intent slideIntent = new Intent(this, typeof(DiceCategoriesActivity));
 				Bundle slideAnim = ActivityOptions.MakeCustomAnimation(Application.Context, Resource.Animation.Anim1, Resource.Animation.Anim2).ToBundle();
 				StartActivity(slideIntent, slideAnim);
-				Finish();
 			};
 			taketoRegularDiceGameButton.Click += delegate {
 				Intent slideIntent = new Intent(this, typeof(RegularDiceActivity));
 				Bundle slideAnim = ActivityOptions.MakeCustomAnimation(Application.Context, Resource.Animation.Anim1, Resource.Animation.Anim2).ToBundle();
 				StartActivity(slideIntent, slideAnim);
-				Finish();
 			};
 
 			taketoHighLowDieGameButton.Click += delegate {

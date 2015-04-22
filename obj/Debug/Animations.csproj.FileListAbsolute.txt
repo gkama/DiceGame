@@ -16,7 +16,6 @@ C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\anim\an
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\anim\anim2.xml
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\R.cs.flag
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\uploadflags.txt
-C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\drawable-xxhdpi\dragon.jpg
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\drawable-xxhdpi\background.jpg
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\values\styles.xml
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\drawable-xxhdpi\greybutton.xml
@@ -25,14 +24,11 @@ C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\layout\
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\layout\dicecategoriesscreen.xml
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\layout\regulardicescreen.xml
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\layout\highlowdicescreen.xml
-C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\drawable-xxhdpi\favicon.ico
-C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\drawable-xxhdpi\blankwhitedice.ico
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\layout\chuckaluckscreen.xml
-C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\drawable-xxhdpi\dicemastericon.png
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\layout\aboutscreen.xml
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\anim\anim3.xml
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\anim\anim4.xml
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\layout\statsscreen.xml
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\drawable-xxhdpi\statsbutton.xml
 C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\drawable-xxhdpi\dollarsign.jpg
-C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\drawable-xxhdpi\tabicon.xml
+C:\Users\gkam4141\Documents\Projects\Animations\Animations\obj\Debug\res\drawable-xxhdpi\dice.png
